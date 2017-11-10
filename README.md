@@ -1,5 +1,6 @@
 # Xcompress
 A simple utility to compress or extract any UNIX archive.
+This utility gives user a uniform way to compress and extract all types of archives.
 
 ## Usage:
 

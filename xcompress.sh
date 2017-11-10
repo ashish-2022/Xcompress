@@ -14,8 +14,12 @@ ftype="tar"
 
 usage()
 {
+  echo ""
   echo "A simple utility to compress or extract any UNIX archive."
-  echo "Usage: $0 -c/x -f <source> -t <type>"
+  echo ""
+  echo "Usage:"
+  echo "   $0 -c|x -t <compression_type> -f <file/directory>"
+  echo ""
   echo "   c = compress"
   echo "   x = extract"
   echo "   f = file or folder name"
