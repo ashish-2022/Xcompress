@@ -1,6 +1,6 @@
 #!/bin/sh
 # -----------------------------------------------------------------------------
-# A simple utility to compress or extract any unix archive
+# A simple utility to compress or extract any UNIX archive
 # -----------------------------------------------------------------------------
 
 # A POSIX variable
@@ -14,7 +14,7 @@ ftype="tar"
 
 usage()
 {
-  echo "A simple utility to compress or extract any unix archive."
+  echo "A simple utility to compress or extract any UNIX archive."
   echo "Usage: $0 -c/x -f <source> -t <type>"
   echo "   c = compress"
   echo "   x = extract"
@@ -61,7 +61,7 @@ then
 fi
 
 case "$ftype" in
-   "tar") echo "Type is tar"
+   "tar")
    if [ $create == 1 ]
    then
    tar -cvf $file.$ftype $file
@@ -72,7 +72,7 @@ case "$ftype" in
    echo "Unknown operation"
    fi
    ;;
-   "tar.gz") echo "Type is tar.gz" 
+   "tar.gz")
    if [ $create == 1 ]
    then
    tar -cvzf $file.$ftype $file
@@ -83,7 +83,7 @@ case "$ftype" in
    echo "Unknown operation"
    fi
    ;;
-   "tar.bz2") echo "Type is tar.bz2" 
+   "tar.bz2")
    if [ $create == 1 ]
    then
    tar -cvjf $file.$ftype $file
@@ -94,7 +94,7 @@ case "$ftype" in
    echo "Unknown operation"
    fi
    ;;
-   "tar.xz") echo "Type is tar.xz" 
+   "tar.xz")
    if [ $create == 1 ]
    then
    tar -cvJf $file.$ftype $file
@@ -105,7 +105,7 @@ case "$ftype" in
    echo "Unknown operation"
    fi
    ;;
-   "zip") echo "Type is zip"
+   "zip")
    if [ $create == 1 ]
    then
    zip -r $file.$ftype $file
