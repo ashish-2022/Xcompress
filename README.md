@@ -1,6 +1,10 @@
 # Xcompress
 A simple utility to compress or extract any UNIX archive.
 
+Usage:
+      ./xcompress.sh -c -t <type> -f <file/directory>
+
+
 ## Compressing:
 
 $ ls
