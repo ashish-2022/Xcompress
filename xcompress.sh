@@ -120,6 +120,17 @@ case "$ftype" in
    echo "Unknown operation"
    fi
    ;;
+   "7z")
+   if [ $create == 1 ]
+   then
+   7z a -t7z $file.$ftype $file
+   elif [ $extract == 1 ]
+   then
+   7z x $file
+   else
+   echo "Unknown operation"
+   fi
+   ;;
 esac
 
 # End of file
