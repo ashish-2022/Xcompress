@@ -137,6 +137,15 @@ case "$ftype" in
    bzip2 -d $file
    fi
    ;;
+   "xz")
+   if [ $create == 1 ]
+   then
+   xz -z $file
+   elif [ $extract == 1 ]
+   then
+   xz -d $file
+   fi
+   ;;
 esac
 
 # End of file
