@@ -72,8 +72,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    tar -xvf $file
-   else
-   echo "Unknown operation"
    fi
    ;;
    "tar.gz"|"tgz"|"tar.Z")
@@ -83,8 +81,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    tar -xvzf $file
-   else
-   echo "Unknown operation"
    fi
    ;;
    "tar.bz2"|"tbz"|"tar.gz2"|"tar.bz")
@@ -94,8 +90,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    tar -xvjf $file
-   else
-   echo "Unknown operation"
    fi
    ;;
    "tar.xz")
@@ -105,8 +99,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    tar -xvJf $file
-   else
-   echo "Unknown operation"
    fi
    ;;
    "zip")
@@ -116,8 +108,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    unzip $file
-   else
-   echo "Unknown operation"
    fi
    ;;
    "7z"|"cbz"|"cbr")
@@ -127,8 +117,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    7z x $file
-   else
-   echo "Unknown operation"
    fi
    ;;
    "gz")
@@ -138,8 +126,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    gunzip $file
-   else
-   echo "Unknown operation"
    fi
    ;;
    "bz2")
@@ -149,8 +135,6 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    bzip2 -d $file
-   else
-   echo "Unknown operation"
    fi
    ;;
 esac
