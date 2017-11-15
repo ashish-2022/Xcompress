@@ -23,7 +23,7 @@ usage()
   echo "   c = compress"
   echo "   x = extract"
   echo "   f = file or folder name"
-  echo "   t = type of archive (tar|tar.gz|tar.bz2|tar.xz|tbz|zip...etc)"
+  echo "   t = type of archive (tar|tar.gz|tar.bz2|tar.xz|tbz|zip|cbz...etc)"
   echo ""
 }
 
@@ -120,13 +120,35 @@ case "$ftype" in
    echo "Unknown operation"
    fi
    ;;
-   "7z")
+   "7z"|"cbz"|"cbr")
    if [ $create == 1 ]
    then
    7z a -t7z $file.$ftype $file
    elif [ $extract == 1 ]
    then
    7z x $file
+   else
+   echo "Unknown operation"
+   fi
+   ;;
+   "gz")
+   if [ $create == 1 ]
+   then
+   gzip -9 $file
+   elif [ $extract == 1 ]
+   then
+   gunzip $file
+   else
+   echo "Unknown operation"
+   fi
+   ;;
+   "bz2")
+   if [ $create == 1 ]
+   then
+   bzip2 -z $file
+   elif [ $extract == 1 ]
+   then
+   bzip2 -d $file
    else
    echo "Unknown operation"
    fi
