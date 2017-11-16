@@ -5,7 +5,7 @@ This utility is written for UNIX users who don't want to remember complex flags 
 compression tools and is FREE to copy and use.  
 
 Supported Types:  
-tar, tar.gz, tgz, tar.bz, tar.bz2, tar.gz2, tar.Z, tbz, zip, 7z, tar.xz, gz, bz2, xz, cbr, cbz  
+tar, tar.gz, tgz, tar.bz, tar.bz2, tar.gz2, tar.Z, tbz, zip, 7z, tar.xz, gz, bz2, xz, lz, cbr, cbz, tar.lz, tar.lzma  
 
 ## Usage:
 

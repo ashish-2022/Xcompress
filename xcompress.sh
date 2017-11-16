@@ -110,6 +110,24 @@ case "$ftype" in
    tar -xvJf $file
    fi
    ;;
+   "tar.lz")
+   if [ $create == 1 ]
+   then
+   tar --lzip -cvf $file.$ftype $file
+   elif [ $extract == 1 ]
+   then
+   tar --lzip -xvf $file
+   fi
+   ;;
+   "tar.lzma")
+   if [ $create == 1 ]
+   then
+   tar --lzma -cvf $file.$ftype $file
+   elif [ $extract == 1 ]
+   then
+   tar --lzma -xvf $file
+   fi
+   ;;
    "zip")
    if [ $create == 1 ]
    then
@@ -162,6 +180,15 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    compress -d $file
+   fi
+   ;;
+   "lz")
+   if [ $create == 1 ]
+   then
+   lzip $file
+   elif [ $extract == 1 ]
+   then
+   lzip -d $file
    fi
    ;;
 esac
