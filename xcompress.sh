@@ -74,13 +74,22 @@ case "$ftype" in
    tar -xvf $file
    fi
    ;;
-   "tar.gz"|"tgz"|"tar.Z")
+   "tar.gz"|"tgz")
    if [ $create == 1 ]
    then
    tar -cvzf $file.$ftype $file
    elif [ $extract == 1 ]
    then
    tar -xvzf $file
+   fi
+   ;;
+   "tar.Z")
+   if [ $create == 1 ]
+   then
+   tar -cvZf $file.$ftype $file
+   elif [ $extract == 1 ]
+   then
+   tar -xvZf $file
    fi
    ;;
    "tar.bz2"|"tbz"|"tar.gz2"|"tar.bz")
@@ -144,6 +153,15 @@ case "$ftype" in
    elif [ $extract == 1 ]
    then
    xz -d $file
+   fi
+   ;;
+   "Z")
+   if [ $create == 1 ]
+   then
+   compress $file
+   elif [ $extract == 1 ]
+   then
+   compress -d $file
    fi
    ;;
 esac
